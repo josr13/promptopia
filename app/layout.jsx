@@ -1,11 +1,21 @@
 import "@styles/globals.css";
 
-const layout = () => {
+export const metadata = {
+  title: "Promptopia",
+  description: "Discover & Share ChatGPT Prompts",
+};
+
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body></body>
+      <body>
+        <div className="main">
+          <div className="gradient" />
+          <main className="app">{children}</main>
+        </div>
+      </body>
     </html>
   );
 };
 
-export default layout;
+export default RootLayout;
